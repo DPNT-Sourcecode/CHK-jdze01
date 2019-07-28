@@ -11,4 +11,3 @@ def sum_solution(a: int, b: int):
         return None
 
     return a+b
-
