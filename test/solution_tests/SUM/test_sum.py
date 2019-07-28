@@ -1,4 +1,4 @@
-from solutions.SUM import sum_solution
+from solutions.SUM_R1 import sum_solution
 import pytest
 
 
@@ -24,3 +24,4 @@ class TestSum():
         with pytest.raises(ValueError) as exceptInfo:
             sum_solution(a, b)
         assert "Values not in range or of required type" in str(exceptInfo.value)
+
