@@ -1,4 +1,4 @@
-from solutions.SUM_R1 import sum_solution
+from solutions.SUM import sum_solution
 import pytest
 
 
