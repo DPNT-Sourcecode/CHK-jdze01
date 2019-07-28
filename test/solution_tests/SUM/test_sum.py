@@ -4,7 +4,7 @@ import pytest
 
 class TestSum():
     def test_sum_operation(self):
-        assert sum(1, 2) == 3
+        assert sum(1, 0) == 1
 
     def test_sum_range(self):
         with pytest.raises(ValueError) as exceptInfo:
