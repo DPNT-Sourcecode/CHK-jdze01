@@ -6,10 +6,16 @@ class TestSum():
         assert sum_solution(1, 2) == 3
 
     def test_sum_range(self):
-        
+        with pytest.raises(ValueError) as exceptInfo:
+            sum_solution(102, 2)
+        assert "Values not in range" in str(exceptInfo.value)
 
-    #
-    #     raise ValueError("Values not in range")
+    def test_sum_type(self):
+        with pytest.raises(ValueError) as exceptInfo:
+            sum_solution('102', 2.5)
+        assert "Input values are not of required type" in str(exceptInfo.value)
+
+
     # elif type(a) is not int or type(b) is not int:
-    #     raise ValueError("Input values are not of required type")
+    #     raise ValueError("")
 
