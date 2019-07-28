@@ -1,7 +1,7 @@
 import sys
 from tdl.queue.queue_based_implementation_runner import QueueBasedImplementationRunnerBuilder
 from tdl.runner.challenge_session import ChallengeSession
-from solutions.SUM_R1 import sum
+from solutions.SUM_R1.sum_solution import sum
 from solutions.HLO import hello_solution
 from solutions.ARRS import array_sum
 from solutions.IRNG import int_range
@@ -67,5 +67,6 @@ ChallengeSession\
     .with_config(Utils.get_config())\
     .with_action_provider(lambda: get_user_input(sys.argv[1:]))\
     .start()
+
 
 

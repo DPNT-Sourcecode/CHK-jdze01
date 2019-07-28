@@ -1,8 +1,8 @@
-from solutions.SUM_R1 import sum
+from lib.solutions.SUM_R1 import sum
 import pytest
 
 
-class TestSum():
+class TestSum:
     def test_sum_operation(self):
         assert sum(1, 0) == 1
 
@@ -24,4 +24,5 @@ class TestSum():
         with pytest.raises(ValueError) as exceptInfo:
             sum(a, b)
         assert "Values not in range or of required type" in str(exceptInfo.value)
+
 
