@@ -13,7 +13,7 @@ class TestSum():
 
     def test_sum_range(self):
         with pytest.raises(ValueError) as exceptInfo:
-            sum_solution(0, 2)
+            sum_solution(-1, 2)
         assert "Values not in range or of required type" in str(exceptInfo.value)
 
     @pytest.mark.parametrize(("a", "b"),
@@ -24,5 +24,3 @@ class TestSum():
         with pytest.raises(ValueError) as exceptInfo:
             sum_solution(a, b)
         assert "Values not in range or of required type" in str(exceptInfo.value)
-
-
