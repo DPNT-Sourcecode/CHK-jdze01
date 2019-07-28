@@ -1,5 +1,5 @@
 
-def sum_integers(a: int, b: int):
+def sum_solution(a: int, b: int):
     """In order to complete the round you need to implement the following method:
          sum(Integer, Integer) -> Integer
 
@@ -11,3 +11,4 @@ def sum_integers(a: int, b: int):
         return None
 
     return a+b
+
