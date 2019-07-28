@@ -24,5 +24,3 @@ class TestSum:
         with pytest.raises(ValueError) as exceptInfo:
             sum(a, b)
         assert "Values not in range or of required type" in str(exceptInfo.value)
-
-
