@@ -22,7 +22,7 @@ For example, item A might cost 50 pounds individually, but this week we have a s
             break
         elif sku[0].isdigit():
             sku_str = get_char_from_str(sku)
-            num = sku[:len(sku_str)]
+            num = int(sku[:len(sku_str)])
             total_sum = total_sum + \
                         ((num // skus_discount[sku_str]["min_prod"]) * store_skus[sku_str] * skus_discount[sku_str]["rate"]) + \
                         ((num % skus_discount[sku_str]["min_prod"]) * store_skus[sku_str])
@@ -42,6 +42,7 @@ Our price table and offers:
 | C    | 20    |                |
 | D    | 15    |                |
 +------+-------+----------------+"""
+
 
 
 
