@@ -17,7 +17,7 @@ For example, item A might cost 50 pounds individually, but this week we have a s
             "rate": 45 / 50}
     }
     for sku in skus:
-        if sku is not str or get_char_from_str(sku) not in store_skus.keys():
+        if type(sku) is not str or get_char_from_str(sku) not in store_skus.keys():
             total_sum = -1
             break
         elif sku[0].isdigit():
@@ -42,5 +42,6 @@ Our price table and offers:
 | C    | 20    |                |
 | D    | 15    |                |
 +------+-------+----------------+"""
+
 
 
