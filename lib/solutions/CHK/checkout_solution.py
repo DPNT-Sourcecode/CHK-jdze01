@@ -17,16 +17,19 @@ For example, item A might cost 50 pounds individually, but this week we have a s
             "rate": 45 / 50}
     }
     for sku in skus:
-        if sku is not store_skus:
+        if sku not in store_skus:
             total_sum = -1
             break
-        if sku[0].isdigit():
+        elif sku[0].isdigit():
             num = get_digits(sku)
-            string = sku[len(str(num)):]
-            total_sum = total_sum + num
+            sku_str = sku[len(str(num)):]
+            total_sum = total_sum + \
+                        ((num // skus_discount[sku_str]["min_prod"]) * store_skus[sku_str] * skus_discount[sku_str]["rate"]) + \
+                        ((num % skus_discount[sku_str]["min_prod"]) * store_skus[sku_str])
+        else:
+            total_sum = total_sum + store_skus[sku]
 
-
-    return -1
+    return total_sum
 
 
 """
@@ -39,4 +42,5 @@ Our price table and offers:
 | C    | 20    |                |
 | D    | 15    |                |
 +------+-------+----------------+"""
+
 
