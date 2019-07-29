@@ -21,6 +21,9 @@ For example, item A might cost 50 pounds individually, but this week we have a s
             total_sum = -1
             break
         if sku[0].isdigit():
+            num = get_digits(sku)
+            string = sku[len(str(num)):]
+            total_sum = total_sum + num
 
 
     return -1
@@ -36,3 +39,4 @@ Our price table and offers:
 | C    | 20    |                |
 | D    | 15    |                |
 +------+-------+----------------+"""
+
