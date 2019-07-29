@@ -18,7 +18,7 @@ For example, item A might cost 50 pounds individually, but this week we have a s
         if sku is not store_skus:
             total_sum = -1
             break
-
+        if sku[0].is
     return -1
 
 
@@ -32,4 +32,5 @@ Our price table and offers:
 | C    | 20    |                |
 | D    | 15    |                |
 +------+-------+----------------+"""
+
 
