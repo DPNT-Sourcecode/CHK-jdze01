@@ -14,7 +14,7 @@ For example, item A might cost 50 pounds individually, but this week we have a s
         "rate": 130 / 150},
         "B": {
             "min_prod": 2,
-            "rate": 45 / 50}
+            "rate": 45 / 60}
     }
     for sku in skus:
         if type(sku) is not str or get_char_from_str(sku) not in store_skus.keys():
@@ -42,6 +42,7 @@ Our price table and offers:
 | C    | 20    |                |
 | D    | 15    |                |
 +------+-------+----------------+"""
+
 
 
 
