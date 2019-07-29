@@ -9,4 +9,3 @@ def hello(friend_name):
     if type(message) is not str:
         raise TypeError("Output message is not of string type")
     return message
-
