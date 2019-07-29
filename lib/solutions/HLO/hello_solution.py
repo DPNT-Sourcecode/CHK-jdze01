@@ -5,7 +5,8 @@
 def hello(friend_name):
     if type(friend_name) is not str:
         raise TypeError("Input parameter is not of string type")
-    message = str("Hello, World!")
+    message = str("Hello, " + friend_name + "!")
     if type(message) is not str:
         raise TypeError("Output message is not of string type")
     return message
+
