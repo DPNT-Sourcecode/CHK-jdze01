@@ -9,6 +9,11 @@ class TestHello:
             hello(2)
         assert "Input parameter is not of string type" in str(exceptInfo.value)
 
+    def test_hello_output_type(self):
+        with pytest.raises(TypeError) as exceptInfo:
+           message = hello("name")
+        assert "Output message is not of string type" in str(exceptInfo.value)
+
 
     # @pytest.mark.parametrize(("a", "b"),
     #                          [(1, 2.5),
