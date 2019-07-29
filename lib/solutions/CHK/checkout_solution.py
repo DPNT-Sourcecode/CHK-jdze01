@@ -5,7 +5,7 @@ Our goods are priced individually. In addition, some items are multi-priced: buy
 For example, item A might cost 50 pounds individually, but this week we have a special offer:
  buy three As and they'll cost you 130."""
     def get_char_from_str(string):
-        return int("".join([i for i in string if not i.isdigit()]))
+        return "".join([i for i in string if not i.isdigit()])
     skus = skus.split()
     total_sum = 0
     store_skus = {"A": 50, "B": 30, "C": 20, "D": 15}
@@ -17,7 +17,7 @@ For example, item A might cost 50 pounds individually, but this week we have a s
             "rate": 45 / 50}
     }
     for sku in skus:
-        if sku not in store_skus.keys():
+        if sku is not str or get_char_from_str(sku) not in store_skus.keys():
             total_sum = -1
             break
         elif sku[0].isdigit():
@@ -42,4 +42,5 @@ Our price table and offers:
 | C    | 20    |                |
 | D    | 15    |                |
 +------+-------+----------------+"""
+
 
